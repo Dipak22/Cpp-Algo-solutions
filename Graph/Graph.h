@@ -18,8 +18,17 @@ class Graph{
     void dfsUtility(int source,bool* visited);
     int numberOfNodesInGivenLevel(int level);
     void modifiedDFS(vector<bool>& visited, int source, int& currentLevel, int level, int& numberOfNodes);
-    void getTranspose();
+    Graph getTranspose();
     void printGraph();
+    void printAllPaths(int source,int destination);
+    void utilityFunction(int source, int destination, vector <bool>& visited, vector<int>& path, int & pathIndex);
+    bool isStronglyConnected();
+    void scUtility(int source,vector<bool>& visited);
+    void printConnectedComponents();
+    bool willCauseSeparateComponents(int u,int v);
+    bool isBipartite(int source);
+    bool utilityFunction(int v, vector<bool>& visited, vector<bool>& color);
+    void topologicalSort();
 };
 
 #endif

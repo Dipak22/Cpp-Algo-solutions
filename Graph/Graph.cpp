@@ -11,6 +11,7 @@ Graph::Graph(int v){
 void Graph::addEdge(int u,int v){
     if(v<vertices && u<vertices){
         adjacencyList[u].push_back(v);
+        //adjacencyList[v].push_back(u);
     }
 }
 
